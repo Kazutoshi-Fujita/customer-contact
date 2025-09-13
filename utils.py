@@ -337,7 +337,7 @@ def notice_slack(chat_message):
 
     # 問い合わせ内容と関連性が高い従業員のID一覧を取得
     messages = prompt_template.format_prompt(context=context, query=chat_message, format_instruction=format_instruction).to_messages()
-    employee_id_response = st.session_state.llm(messages)
+    employee_id_response = st.session_state.llm.invoke(messages) 
     employee_ids = output_parser.parse(employee_id_response.content)
 
     # 問い合わせ内容と関連性が高い従業員情報を、IDで照合して取得
