@@ -565,3 +565,21 @@ def adjust_string(s):
     
     # OSがWindows以外の場合はそのまま返す
     return s
+
+def run_ecotee_creator_doc_chain(param):
+    """
+    EcoTee Creatorに関するデータ参照に特化したTool設定用の関数
+
+    Args:
+        param: ユーザー入力値
+
+    Returns:
+        LLMからの回答
+    """
+    # EcoTee Creatorに関するデータ参照に特化したChainを実行してLLMからの回答取得
+    ai_msg = st.session_state.ecotee_creator_doc_chain.invoke({"input": param, "chat_history": st.session_state.chat_history})
+
+    # 会話履歴への追加
+    st.session_state.chat_history.extend([HumanMessage(content=param), AIMessage(content=ai_msg["answer"])])
+
+    return ai_msg["answer"]

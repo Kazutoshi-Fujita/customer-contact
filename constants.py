@@ -87,7 +87,7 @@ SUPPORTED_EXTENSIONS = {
 
 DB_ALL_PATH = "./.db_all"
 DB_COMPANY_PATH = "./.db_company"
-
+DB_ECOTEE_CREATOR_PATH = "./.db_ecotee_creator"
 
 # ==========================================
 # AIエージェント関連
@@ -100,7 +100,8 @@ DB_CUSTOMER_PATH = "./.db_customer"
 DB_NAMES = {
     DB_COMPANY_PATH: f"{RAG_TOP_FOLDER_PATH}/company",
     DB_SERVICE_PATH: f"{RAG_TOP_FOLDER_PATH}/service",
-    DB_CUSTOMER_PATH: f"{RAG_TOP_FOLDER_PATH}/customer"
+    DB_CUSTOMER_PATH: f"{RAG_TOP_FOLDER_PATH}/customer",
+    DB_ECOTEE_CREATOR_PATH: f"{RAG_TOP_FOLDER_PATH}/ecotee_creator"
 }
 
 AI_AGENT_MODE_ON = "利用する"
@@ -117,7 +118,8 @@ SEARCH_CUSTOMER_COMMUNICATION_INFO_TOOL_NAME = "search_customer_communication_to
 SEARCH_CUSTOMER_COMMUNICATION_INFO_TOOL_DESCRIPTION = "顧客とのやりとりに関する情報を参照したい時に使う"
 SEARCH_WEB_INFO_TOOL_NAME = "search_web_tool"
 SEARCH_WEB_INFO_TOOL_DESCRIPTION = "自社サービス「HealthX」に関する質問で、Web検索が必要と判断した場合に使う"
-
+SEARCH_ECOTEE_CREATOR_INFO_TOOL_NAME = "search_ecotee_creator_info_tool"
+SEARCH_ECOTEE_CREATOR_INFO_TOOL_DESCRIPTION = "Webサービス「EcoTee Creator」に関する情報を参照したい時に使う"
 
 # ==========================================
 # Slack連携関連
